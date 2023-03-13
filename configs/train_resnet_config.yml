@@ -1,0 +1,55 @@
+TRAIN:
+    USE_CUDA: True
+    MAX_EPOCH: 60
+    BATCH_SIZE: 8
+    LR: 0.0001
+    DROPOUT: 0.5 #0.0
+    SEED: 1234
+    FREEZE_BACKBONE: False
+
+    SAVE_PATH: "ev_logs/dtw_embeds"
+#    SAVE_PATH: "ev_logs/resnet50-kin4+vit+sa_lr0.0001_bs8ns16_alignment"
+#  SAVE_PATH: 'csv_logs/resnet50-kin4+vit+sa_lr0.0001_bs16ns16'
+#  SAVE_PATH: 'coin_logs/resnet50-kin4+vit+sa_lr0.0001_bs16ns16'
+#  SAVE_PATH: 'diving_logs/resnet50-kin4+vit+sa_lr0.0001_bs16ns16'
+
+MODEL:
+    BACKBONE: "cat"
+    BASE_MODEL: "resnet50"
+    PRETRAIN: "pretrained/resnet50-kinetics400.pth"
+    DIM_EMBEDDING: 128
+    TRANSFORMER: True
+    ALIGNMENT: True
+    SEQ_LOSS_COEF: 10.0
+    CLS_LOSS_COEF: 0.01
+    SAVE_EPOCHS: 1
+
+DATASET:
+    MODE: "train"
+
+    # EV (Exercise Videos) Dataset
+    NAME: "EV"
+    TXT_PATH: "./datasets/EV/train_pairs.txt"
+    #TXT_PATH: "./datasets/EV/tmp_pairs.txt"
+    NUM_CLASS: 22
+    BASE_PATH: "/home/workspace/datasets/exercise-videos/frames/"
+    #  CSV dataset
+    # NAME: "CSV"
+    # TXT_PATH: "./Datasets/CSV/train_pairs.txt"
+    # NUM_CLASS: 45
+
+    #  COIN dataset
+    #  NAME: 'COIN-SV'
+    #  TXT_PATH: './Datasets/COIN-SV/train_pairs.txt'
+    #  NUM_CLASS: 37
+
+    #  Diving dataset
+    #  NAME: 'DIVING48-SV'
+    #  TXT_PATH: './Datasets/DIVING48-SV/train_pairs.txt'
+    #  NUM_CLASS: 20
+
+    NUM_SAMPLE: 1216
+    NUM_CLIP: 16
+    AUGMENT: True
+    SHUFFLE: True
+    NUM_WORKERS: 8

@@ -1,0 +1,38 @@
+TRAIN:
+    BATCH_SIZE: 1
+    DROPOUT: 0.0
+
+MODEL:
+    DIM_EMBEDDING: 128
+    TRANSFORMER: True
+    ALIGNMENT: True
+
+DATASET:
+    MODE: "test"
+
+    # EV (Exercise Videos) Dataset
+    NAME: "EV"
+    TXT_PATH: "./datasets/EV/predict_pairs.txt"
+    NUM_CLASS: 22
+    BASE_PATH: "/home/workspace/datasets/exercise-videos/frames/"
+
+    #  CSV dataset
+    # NAME: 'CSV'
+    # TXT_PATH: './Datasets/CSV/vis_pairs.txt'
+    # NUM_CLASS: 45
+
+    #  COIN dataset
+    #  NAME: 'COIN-SV'
+    #  TXT_PATH: './Datasets/COIN-SV/val_pairs.txt'
+    #  TXT_PATH: './Datasets/COIN-SV/test_pairs.txt'
+    #  NUM_CLASS: 37
+
+    #  Diving48 dataset;
+    #  NAME: 'DIVING48-SV'
+    #  TXT_PATH: '/Datasets/DIVING48-SV/val_pairs.txt'
+    #  TXT_PATH: '/Datasets/DIVING48-SV/test_pairs.txt'
+    #  NUM_CLASS: 20
+    NUM_CLIP: 16
+    AUGMENT: False
+    SHUFFLE: True
+    NUM_WORKERS: 0

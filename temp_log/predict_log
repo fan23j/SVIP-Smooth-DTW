@@ -1,0 +1,34 @@
+2023-03-07 11:28:48,029 ActionVerification INFO: Running with config:
+DATASET:
+  AUGMENT: False
+  BASE_PATH: /home/workspace/datasets/exercise-videos/frames/
+  MODALITY: RGB
+  MODE: test
+  NAME: EV
+  NUM_CLASS: 22
+  NUM_CLIP: 16
+  NUM_SAMPLE: 600
+  NUM_WORKERS: 0
+  SHUFFLE: True
+  TXT_PATH: ./datasets/EV/predict_pairs.txt
+MODEL:
+  ALIGNMENT: True
+  BACKBONE: cat
+  BASE_MODEL: None
+  CLS_LOSS_COEF: 1.0
+  DIM_EMBEDDING: 128
+  PRETRAIN: None
+  SAVE_EPOCHS: 1
+  SEQ_LOSS_COEF: 1.0
+  TRANSFORMER: True
+TRAIN:
+  BATCH_SIZE: 1
+  DROPOUT: 0.0
+  FREEZE_BACKBONE: False
+  LR: 0.0001
+  MAX_EPOCH: 120
+  SAVE_PATH: None
+  SEED: 1234
+  USE_CUDA: True
+
+2023-03-07 11:28:52,288 ActionVerification INFO: To evaluate 1 models in ev_logs/dtw_embeds/save_models/epoch_60.tar with threshold 1000.0000
