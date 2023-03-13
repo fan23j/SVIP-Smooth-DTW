@@ -1,5 +1,8 @@
-# SVIP: Sequence VerIfication for Procedures in Videos
-This repo is the official implementation of our CVPR 2022 paper: [*SVIP: Sequence VerIfication for Procedures in Videos*](https://arxiv.org/abs/2112.06447).
+# SVIP-smooth-dtw: Sequence VerIfication for Procedures in Videos with Smooth DTW
+This repo is a experimental combination of `SVIP`:https://github.com/svip-lab/SVIP-Sequence-VerIfication-for-Procedures-in-Videos
+and `VideoAlignment`: https://github.com/hadjisma/VideoAlignment.
+
+Main pipeline uses SVIP so the setup and scripts are copied from there. Smooth DTW loss defined in `utils/smoothDTW.py`. Training pipeline is modified to only use Smooth DTW loss. Some example figures in `figs`. `dist_matrix_*.png` corresponds to distance matrix from smooth DTW. `dtw_matrix_*.png` corresponds to DTW matrix computed through DP. `frames_*.png` corresponds to the frame input pairing including labels.
 
 <image src="imgs/task.png" width="700">
 
