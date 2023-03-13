@@ -88,8 +88,8 @@ def train():
                     epoch + 1, cfg.TRAIN.MAX_EPOCH, iter + 1, len(train_loader), loss.item()))
 
             loss_per_epoch += loss.item()
-            num_true_pred += torch.sum(torch.argmax(pred1, dim=-1) == labels1) + \
-                torch.sum(torch.argmax(pred2, dim=-1) == labels2)
+#             num_true_pred += torch.sum(torch.argmax(pred1, dim=-1) == labels1) + \
+#                 torch.sum(torch.argmax(pred2, dim=-1) == labels2)
 
             # Update weights
             optimizer.zero_grad()
